@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-gray-900 overflow-y-hidden">
+    
+<div class="container w-full h-screen flex flex-col items-center justify-center">
+    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Friends List :</h2>
+<ul class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+    {% for friend in friends %}
+    <li>
+        {{friend | capfirst}}
+    </li>
+    {% endfor %}
+   
+</ul>
+</div>
+
+</body>
+</html>

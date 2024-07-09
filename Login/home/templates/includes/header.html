@@ -1,0 +1,27 @@
+
+<header class="text-white bg-gray-900 body-font ">
+  <div class="container mx-auto w-[80%] flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+     
+      <a href="{% url "home" %}" class="ml-3 text-xl">CodeWithJoel</a>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+     
+        {% if user.is_authenticated %}
+
+        <a href='{% url "logout" %}' class="inline-flex items-center bg-indigo-500 border-0 py-1 px-3 transition focus:outline-none hover:bg-indigo-600 rounded text-base mt-4 md:mt-0 cursor-pointer mx-4">Logout
+         
+        </a>
+        {% else %}
+        <a href='{% url "login" %}' class="inline-flex items-center bg-indigo-500 border-0 py-1 px-3 transition focus:outline-none hover:bg-indigo-600 rounded text-base mt-4 md:mt-0 cursor-pointer mx-4">Login
+         
+        </a>
+    
+        <a href='{% url "signup" %}' class="inline-flex items-center bg-indigo-500 border-0 py-1 px-3 transition focus:outline-none hover:bg-indigo-600 rounded text-base mt-4 md:mt-0 cursor-pointer">SignUp
+        </a>{% endif %}
+    </nav>
+     
+
+
+  </div>
+</header>

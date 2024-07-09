@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+   <style>
+    a{
+        cursor: pointer;
+    }
+   </style>
+    <title>CodeWithJoe</title>
+
+</head>
+<body class="bg-gray-800">
+    {% include "includes/header.html" %}
+    
+    <div class="container w-[75%] mx-auto ">
+    {% block content %}{% endblock content %}
+    </div>
+    {% include "includes/footer.html" %}
+    
+</body>
+</html>
